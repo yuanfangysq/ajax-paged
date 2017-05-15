@@ -27,6 +27,9 @@
                 for (var i = 0; i < JsonData.length; i++) {  
                     var data = "<tr><td >" + JsonData[i].id + "</td><td >" + JsonData[i].ProdcutName + "</td><td >" + JsonData[i].ProductCodde + "</td><td >" + JsonData[i].Rates + "</td></tr>";
                     $("#t1").append(data);  
+                    
+
+                 
   
                 }  
   
