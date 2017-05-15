@@ -1,0 +1,21 @@
+﻿ALTER proc [dbo].[proc_location_Paging]   --创建存储过程
+(
+@pageSize int,  --页大小
+@currentpage int,  --当前页
+@rowCount int output,  --总行数(传出参数)
+@pageCount int output  --总页数(传出参数)
+)
+as
+begin
+
+select @rowCount= COUNT(id) from [dbo].[Procut_Taxation]  --给@rowCount赋值
+
+select @pageCount= CEILING((count(id)+0.0)/@pageSize) from [dbo].[Procut_Taxation]  --给@pageCount赋值
+
+select top (@pagesize)* from (select ROW_NUMBER() over(order by id) as rowID,* from [Procut_Taxation]) as t1
+where rowID >(@pageSize*(@currentpage-1))
+
+end
+
+
+

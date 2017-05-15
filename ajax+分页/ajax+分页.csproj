@@ -85,6 +85,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <None Include="Scripts\_references.js" />
+    <Content Include="DAL\proc.xml" />
     <Content Include="test1.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
