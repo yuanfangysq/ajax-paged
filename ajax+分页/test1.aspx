@@ -16,11 +16,11 @@
    
     <script type="text/javascript">  
      
-
+        
         $(function () {  
             $.get("API/GetPageData.ashx?currentPage=3", function (obj) { //假设当前页是第二页currentPage=2  
                 debugger;  
-  
+                String a="";
                 var JsonData = $.parseJSON(obj);  
                 alert(JsonData[1].id);
                 //debugger;  
